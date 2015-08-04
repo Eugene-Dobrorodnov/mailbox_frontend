@@ -8,8 +8,8 @@
  * Service in the mailboxFrontendApp.
  */
 angular.module('mailboxFrontendApp')
-  .factory('Latter', function ($http) {
-    var resource_url = 'http://localhost:3005/api/v1/latters';
+  .factory('Latter', function ($http, Config) {
+    var resource_url = Config.HOST + '/latters';
     var self = this;
 
     self.getLatters = function () {

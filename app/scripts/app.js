@@ -34,6 +34,9 @@ angular
       $rootScope.set_auth_headers($rootScope.current_user.email, $rootScope.current_user.authentication_token);
     }
   })
+  .constant('Config',{
+    HOST:  'http://localhost:3005/api/v1'
+  })
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

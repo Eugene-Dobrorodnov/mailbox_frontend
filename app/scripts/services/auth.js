@@ -8,8 +8,8 @@
  * Service in the mailboxFrontendApp.
  */
 angular.module('mailboxFrontendApp')
-  .factory('Auth', function ($http, $rootScope, $cookieStore) {
-    var resource_url = 'http://localhost:3005/api/v1/auth';
+  .factory('Auth', function ($http, $rootScope, $cookieStore, Config) {
+    var resource_url = Config.HOST + '/auth';
     var self = this;
 
     self.signUp = function (user_params) {
