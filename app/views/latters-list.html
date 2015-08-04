@@ -1,0 +1,9 @@
+<div id="latters-content" ng-controller="LatterCtrl">
+  <table class="table table-condensed table-hover">
+    <tr ng-repeat="latter in latters">
+      <td>{{ latter.subject }}</td>
+      <td>{{ latter.content }}</td>
+      <td>{{ latter.created_at }}</td>
+    </tr>
+  </table>
+</div>
